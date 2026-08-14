@@ -1,0 +1,36 @@
+#!/bin/bash
+#Script to install .deb files
+
+DEB_PATH="$1"
+
+if [ -z "$DEB_PATH" ]; then
+    echo "Error: No .deb file was provided"
+    sleep 2
+    exit 1
+fi
+
+#Convert to absolute path
+DEB_ABS_PATH=$(realpath "$DEB_PATH")
+
+#Verify if file exists
+if [ ! -f "$DEB_ABS_PATH" ]; then
+    echo "Error: File '$DEB_ABS_PATH' does not exist."
+    sleep 2
+    exit 1
+fi
+
+echo "Installing $(basename "$DEB_ABS_PATH") into PRoot debian"
+sleep 3
+
+# Execute apt update and install inside of PRoot (Debian)
+proot-distro login debian -- sh -c "apt update && apt install -y '$DEB_ABS_PATH'"
+
+if [ $? -eq 0 ]; then
+    echo "Done. Program will close shortly"
+    sleep 2
+    exit 0
+else
+    echo "Installation failed. Press Enter twice to exit and report any script errors encountered."
+    read -r
+    exit 1
+fi
