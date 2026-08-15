@@ -74,8 +74,13 @@ to open the program, run: `proot-distro login debian` then enter the command to 
 ___
 ## Editing and customization
 
-# Editing the script
+### Editing the script
 
 **General:** To edit the script, run `nano ~/Scripts/debian-installer.sh`
+
 **distro change** To change the distro the installer uses, run `nano ~/Scripts/debian-installer.sh` find `proot-distro login` and change  `debian` to the desired distro.
 ___
+
+# Known issues
+
+**No display output by default:** PRoot Debian operates strictly in terminal (CLI) mode out of the box. To Run Desktop (GUI) apps, you must set up a X11 server Or VNC client.
