@@ -3,9 +3,13 @@ An automatic installer for Devices supporting Termux. Allowing installation of D
 _____________________________________________________________________________________________
 How to Install and Set Up
 Requirements:
+
 A device that has android support (Samsung, Google pixel, ChromeOS, etc)
+
 Termux and Termux API
+
 PRoot (Debian)
+
 Nano (Optional. But install it if you will edit the script)
 
 step 1. installation of requirements: (Before installing, make sure all repositories are up to date with 'apt update && apt upgrade')
