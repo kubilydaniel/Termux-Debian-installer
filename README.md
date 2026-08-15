@@ -27,7 +27,7 @@ ___
 ___
 Termux and Termux API may ask for permissions. enable the following:
 
-**Termux:** `display over other apps` and `install unknown apps`.
+**Termux:** `display over other apps` and `install unknown apps`. Also run `termux-setup-storage` to enable termux to access system storage permissions
 
 **Termux API:** `display over other apps`.
 
