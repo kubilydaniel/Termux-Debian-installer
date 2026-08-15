@@ -19,8 +19,11 @@ PRoot (Debian): Run 'pkg install proot proot-distro' then after installation run
 Nano: Run 'pkg install nano' in Termux.
 
 Termux and Termux API may ask for permissions. enable the following:
+
 Termux: 'display over other apps' and 'install unknown apps'.
+
 Termux API: 'display over other apps'.
+
 If these permissons do not appear automatically, they should be in: settings/apps/Termux/Advanced
                                                                            /Termux:API/Advanced
 
@@ -40,8 +43,11 @@ ln -sf ~/Scripts/debian-installer.sh ~/bin/termux-file-editor
 chmod +x ~/bin/termux-file-editor
 _____________________________________________________________________________________________
 How to use (File manager) 
+
 Step 1. Locate the .deb file you want to install in the files app
+
 step 2. press and hold (or press the three vertical dots) and press 'Open With' and click 'Termux'.
+
 Step 3. a Termux pop up should appear with your file name and have three options, being: 'Open Directory', 'Cancel', and 'Edit'. press edit and the script should start.
 
 How to use (terminal)
